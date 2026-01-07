@@ -5,7 +5,6 @@ from ingestion.chunker import chunk_text
 from ingestion.embedder import get_embedding
 from ingestion.vector_store import VectorStore
 from retrieval.retriever import Retriever
-from user_docs.parser import parse_user_application
 from llm.chat import get_llm_response
 from prompts.prompt_builder import PromptBuilder
 
@@ -45,18 +44,14 @@ with open(SYSTEM_PROMPT_PATH, "r") as f:
 
 # --- 2. Application Logic ---
 
-def process_upload(file_obj):
+def process_application(text_input):
     """
-    Handles file upload, parses text, and stores in user session.
+    Handles application text input and stores in user session.
     """
-    if file_obj is None:
-        return "No file uploaded.", None
+    if not text_input or text_input.strip() == "":
+        return "No application details provided.", None
     
-    try:
-        content = parse_user_application(file_obj.name)
-        return "Application uploaded successfully! You can now ask questions about it.", content
-    except Exception as e:
-        return f"Error processing file: {e}", None
+    return "Application details saved! You can now ask questions about your eligibility.", text_input.strip()
 
 def chat_logic(message, history, user_context_state):
     """
@@ -93,19 +88,15 @@ with gr.Blocks() as demo:
 
     with gr.Row():
         with gr.Column(scale=1):
-            gr.Markdown("### 1. Upload Application (Optional)")
-            file_upload = gr.File(label="Upload Loan Application (PDF or Image)", file_types=[".pdf", ".png", ".jpg", ".jpeg"])
+            gr.Markdown("### 1. Enter Application Details (Optional)")
+            application_input = gr.Textbox(
+                label="Your Application Details",
+                placeholder="Name: John Doe\nAge: 24\nIncome: $45,000\nCredit Score: 720\nLoan Type: Personal",
+                lines=8,
+                interactive=True
+            )
+            submit_btn = gr.Button("Submit Application", variant="primary")
             upload_status = gr.Textbox(label="Status", interactive=False)
-            
-            # Helper: Example User Doc content
-            with gr.Accordion("See Example Application Format", open=False):
-                gr.Markdown(
-                    "Name: John Doe\n"
-                    "Age: 24\n"
-                    "Income: $45,000\n"
-                    "Credit Score: 720\n"
-                    "Loan Type: Personal\n"
-                )
 
         with gr.Column(scale=2):
             gr.Markdown("### 2. Chat with Consultant")
@@ -115,9 +106,9 @@ with gr.Blocks() as demo:
             )
 
     # Event Wiring
-    file_upload.change(
-        fn=process_upload,
-        inputs=[file_upload],
+    submit_btn.click(
+        fn=process_application,
+        inputs=[application_input],
         outputs=[upload_status, user_context_state]
     )
 
