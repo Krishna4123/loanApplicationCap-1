@@ -1,0 +1,16 @@
+# Intepreter and Environment
+venv/
+env/
+.env
+.venv
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+
+# Project Specific
+*.log
+*.sqlite3
+vector_store.pkl
