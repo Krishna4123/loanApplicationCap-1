@@ -84,7 +84,7 @@ def chat_logic(message, history, user_context_state):
 
 # --- 3. Gradio Interface ---
 
-with gr.Blocks(theme=gr.themes.Soft()) as demo:
+with gr.Blocks() as demo:
     gr.Markdown("# 🏦 Smart Loan Consultant (RAG Demo)")
     gr.Markdown("Ask generic loan questions or upload your application to check eligibility.")
 
@@ -94,7 +94,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     with gr.Row():
         with gr.Column(scale=1):
             gr.Markdown("### 1. Upload Application (Optional)")
-            file_upload = gr.File(label="Upload Loan Application (.txt)", file_types=[".txt"])
+            file_upload = gr.File(label="Upload Loan Application (PDF or Image)", file_types=[".pdf", ".png", ".jpg", ".jpeg"])
             upload_status = gr.Textbox(label="Status", interactive=False)
             
             # Helper: Example User Doc content
@@ -111,8 +111,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
             gr.Markdown("### 2. Chat with Consultant")
             chatbot = gr.ChatInterface(
                 fn=chat_logic,
-                additional_inputs=[user_context_state],
-                type="messages"
+                additional_inputs=[user_context_state]
             )
 
     # Event Wiring
@@ -123,4 +122,4 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(theme=gr.themes.Soft())

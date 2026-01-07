@@ -3,3 +3,7 @@ numpy
 scikit-learn
 openai
 python-dotenv
+pytesseract
+Pillow
+pdf2image
+pypdf
