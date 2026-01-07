@@ -1,0 +1,35 @@
+# Loan Policy for Educational Purpose
+
+## 1. Introduction
+This document outlines the policies for personal and educational loans.
+
+## 2. Personal Loans
+- **Interest Rate**: 12% per annum.
+- **Max Amount**: $50,000.
+- **Tenure**: 1 to 5 years.
+- **Eligibility**:
+  - Minimum Age: 21 years.
+  - Minimum Income: $30,000 per year.
+  - Credit Score: > 650.
+
+## 3. Educational Loans
+- **Interest Rate**: 6% per annum (subsidized).
+- **Max Amount**: $100,000.
+- **Tenure**: Up to 15 years.
+- **Eligibility**:
+  - Must be enrolled in an accredited university.
+  - Co-signer required if income < $20,000.
+
+## 4. Documentation
+- Proof of Identity (Passport/ID).
+- Proof of Income (Payslips/Tax Returns).
+- Admission Letter (for Education Loan).
+
+## 5. Approval Process
+1. Submit Application.
+2. Verification (2-3 business days).
+3. Approval & Disbursement (1-2 business days).
+
+## 6. Foreclosure
+- No penalty for foreclosure after 6 months of EMI payment.
+- 2% penalty if foreclosed within 6 months.
