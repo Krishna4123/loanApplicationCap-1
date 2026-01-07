@@ -11,28 +11,77 @@ from prompts.prompt_builder import PromptBuilder
 # --- 1. Global Initialization ---
 print("Initializing RAG System...")
 
+# Define paths
+POLICY_DIR = os.path.join(os.path.dirname(__file__), "data", "loan_policies")
+VECTOR_STORE_PATH = os.path.join(os.path.dirname(__file__), "vector_store.pkl")
+
 # Initialize Vector Store
 vector_store = VectorStore()
 
-# Load and Ingest Policy Data
-POLICY_DIR = os.path.join(os.path.dirname(__file__), "data", "loan_policies")
-raw_docs = load_text_files(POLICY_DIR)
+def load_or_create_vector_store():
+    """
+    Checks if embeddings exist and prompts user to load or re-chunk.
+    Returns True if successful.
+    """
+    # Check if saved embeddings exist
+    if os.path.exists(VECTOR_STORE_PATH):
+        print("\n" + "="*60)
+        print("Existing embeddings found!")
+        print("="*60)
+        print("Options:")
+        print("  1. Load existing embeddings (fast)")
+        print("  2. Re-chunk and re-embed documents (slow, use after updates)")
+        print("="*60)
+        
+        while True:
+            choice = input("Enter choice (1/2): ").strip()
+            if choice == "1":
+                print("\nLoading existing embeddings...")
+                vector_store.load(VECTOR_STORE_PATH)
+                print(f"✓ Loaded {len(vector_store.chunks)} chunks from disk.")
+                return True
+            elif choice == "2":
+                print("\nRe-chunking documents...")
+                break
+            else:
+                print("Invalid choice. Please enter 1 or 2.")
+    
+    # Perform chunking and embedding
+    raw_docs = load_text_files(POLICY_DIR)
+    
+    if not raw_docs:
+        print("ERROR: No policy documents found in", POLICY_DIR)
+        return False
+    
+    all_chunks = []
+    all_embeddings = []
+    
+    print("Processing documents...")
+    for doc in raw_docs:
+        chunks = chunk_text(doc)
+        print(f"  Generated {len(chunks)} chunks from document")
+        for i, chunk in enumerate(chunks):
+            print(f"  Embedding chunk {i+1}/{len(chunks)}...", end="\r")
+            emb = get_embedding(chunk)
+            if emb is not None:
+                all_chunks.append(chunk)
+                all_embeddings.append(emb)
+        print()  # New line after progress
+    
+    vector_store.add_documents(all_chunks, all_embeddings)
+    print(f"\n✓ Ingestion complete. {len(all_chunks)} chunks stored.")
+    
+    # Save to disk
+    print(f"Saving embeddings to {VECTOR_STORE_PATH}...")
+    vector_store.save(VECTOR_STORE_PATH)
+    print("✓ Embeddings saved successfully.")
+    
+    return True
 
-# Chunk and Embed
-all_chunks = []
-all_embeddings = []
-
-print("Ingesting documents...")
-for doc in raw_docs:
-    chunks = chunk_text(doc)
-    for chunk in chunks:
-        emb = get_embedding(chunk)
-        if emb is not None:
-            all_chunks.append(chunk)
-            all_embeddings.append(emb)
-
-vector_store.add_documents(all_chunks, all_embeddings)
-print(f"Ingestion complete. {len(all_chunks)} chunks stored.")
+# Load or create embeddings
+if not load_or_create_vector_store():
+    print("ERROR: Failed to initialize vector store. Exiting.")
+    exit(1)
 
 # Initialize Retriever
 retriever = Retriever(vector_store)

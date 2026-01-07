@@ -1,0 +1,330 @@
+
+LOANS – Section 3.2 (Condensed Version)
+Federal Deposit Insurance Corporation
+
+INTRODUCTION
+Establishes safety and soundness standards for insured depository institutions. Emphasizes the importance of loan portfolio quality, lending practices, and examiner evaluation in managing credit risk.
+
+LOAN ADMINISTRATION
+
+Lending Policies
+Boards of directors are responsible for establishing and approving written lending policies. Policies should define lending authority, loan types, collateral standards, appraisal guidelines, credit file maintenance, collection procedures, portfolio limits, risk diversification, loan review systems, and allowance for credit losses.
+
+Loan Review Systems
+Loan review systems identify credit weaknesses, support allowance estimation, monitor trends, evaluate lending personnel, ensure policy and regulatory compliance, and provide objective portfolio assessments.
+
+Credit Risk Rating or Grading Systems
+Credit grading identifies problem loans and assigns risk ratings. Independent review of grades is encouraged. Systems should include formal grading, identification of problem loans, reporting mechanisms, and documentation of credit loss experience.
+
+Loan Review System Elements
+Defines review policies including personnel qualifications, independence, review frequency, scope, depth, follow-up, and reporting.
+
+Qualifications of Loan Review Personnel
+Personnel should be experienced, trained, and knowledgeable in lending practices and regulations.
+
+Loan Review Personnel Independence
+Reviews should be conducted independently from loan approval to avoid conflicts of interest.
+
+Frequency of Reviews
+Significant credits are reviewed at least annually or more frequently if risk increases.
+
+Scope of Reviews
+Includes large loans and smaller loans with elevated risk characteristics.
+
+Depth of Reviews
+Reviews assess credit quality, documentation, collateral, approvals, covenant compliance, and accuracy of risk ratings.
+
+Review of Findings and Follow-up
+Findings are discussed with management and unresolved issues reported to the board.
+
+Workpaper and Report Distribution
+Review results are documented and reported regularly to the board.
+
+Current Expected Credit Losses (CECL)
+CECL requires estimation of expected credit losses over the contractual life of financial assets using past events, current conditions, and forecasts.
+
+Allowance for Loan and Lease Losses (ALLL)
+Institutions must maintain an allowance sufficient to absorb estimated credit losses. ALLL covers individual and collective loan risks.
+
+Responsibility of the Board and Management
+Management and boards must maintain appropriate allowance levels, ensure timely charge-offs, and support allowance estimates with documentation.
+
+Factors to Consider in Estimating Credit Losses
+Includes economic conditions, lending policies, portfolio composition, management quality, loan performance, and credit concentrations.
+
+Examiner Responsibilities
+Examiners assess the appropriateness of the allowance and the effectiveness of related systems.
+
+Regulatory Reporting of the ALLL
+ALLL must be reported accurately in regulatory reports and adjusted when inadequate.
+
+Accounting and Reporting Treatment
+Provides accounting guidance for recognizing and measuring loan impairment under U.S. GAAP.
+
+PORTFOLIO COMPOSITION
+
+Commercial Loans
+Loans for business purposes, including working capital and term loans.
+
+Accounts Receivable Financing
+Loans secured by accounts receivable, using blanket assignment or ledgering methods.
+
+Leveraged Lending
+High-risk lending involving elevated borrower leverage.
+
+Applicability
+Risk management should align with the size and complexity of leveraged activities.
+
+General
+Defines leveraged lending characteristics and emphasizes sound underwriting.
+
+Risk Management Framework
+Institutions must maintain strong risk controls, monitoring, and governance.
+
+General Policies
+Includes risk appetite, limits, approval authority, reporting, and underwriting standards.
+
+Participations Purchased
+Institutions must independently evaluate and monitor purchased loan participations.
+
+Underwriting Standards
+Standards should define acceptable leverage, repayment capacity, collateral, and covenants.
+
+Credit Analysis
+Analysis should stress-test cash flows, assess liquidity, and validate valuations.
+
+Valuation Standards
+Enterprise and collateral values must be independently determined and well supported.
+
+Risk Rating Leveraged Loans
+Risk ratings assess repayment and de-leveraging capacity.
+
+Problem Credit Management
+Policies guide the management and resolution of problem credits.
+
+Reporting and Analytics
+Management information systems support monitoring, reporting, and decision-making.
+
+Deal Sponsors
+Guidelines assess sponsor support, incentives, and financial capacity.
+
+Independent Credit Review
+Independent reviews assess leveraged portfolio risks.
+
+Stress Testing
+Periodic stress tests evaluate portfolio sensitivity to adverse conditions.
+
+Conflicts of Interest
+Policies address conflicts between lending, equity interests, and advisory roles.
+
+Oil and Gas Lending
+Specialized lending influenced by commodity prices and industry volatility.
+
+Industry Overview
+Describes upstream, midstream, downstream, and service segments.
+
+Reserve-Based Lending
+Loans based on the value of oil and gas reserves.
+
+Real Estate Loans
+Loans secured by real property.
+
+Real Estate Lending Standards
+Defines underwriting and appraisal standards.
+
+Commercial Real Estate Loans
+Loans for income-producing properties.
+
+Real Estate Construction Loans
+Loans for construction and development projects.
+
+Home Equity Loans
+Loans secured by residential equity.
+
+Agricultural Loans
+Loans supporting agricultural operations.
+
+Agricultural Loan Types and Maturities
+Defines short-term, intermediate, and long-term agricultural loans.
+
+Agricultural Loan Underwriting Guidelines
+Focuses on cash flow, collateral, and borrower capacity.
+
+Administration of Agricultural Loans
+Covers monitoring and servicing practices.
+
+Classification Guidelines for Agricultural Credit
+Provides risk classification standards.
+
+Installment Loans
+Consumer loans repaid in scheduled installments.
+
+Lease Accounting
+Accounting treatment for lease financing.
+
+Direct Lease Financing
+Lessor accounting requirements.
+
+Lessor Accounting under ASC Topic 840
+Legacy lease accounting guidance.
+
+Lessor Accounting under ASC Topic 842
+Current lease accounting guidance.
+
+Examiner Consideration
+Examiner focus areas for lease activities.
+
+Floor Plan Loans
+Inventory financing for dealers.
+
+Check Credit and Credit Card Loans
+Revolving consumer credit products.
+
+Credit Card-related Merchant Activities
+Merchant services related to credit cards.
+
+OTHER CREDIT ISSUES
+
+Appraisals
+Standards for collateral valuation.
+
+Valuation of Troubled Income-Producing Properties
+Guidance for distressed property valuation.
+
+Appraisal Regulation
+Regulatory requirements for appraisals.
+
+Interagency Appraisal and Evaluation Guidelines
+Uniform appraisal standards.
+
+Examination Treatment
+Examiner review procedures.
+
+Loan Participations
+Shared loan arrangements.
+
+Accounting
+Accounting treatment for participations.
+
+Right to Repurchase
+Conditions for repurchase agreements.
+
+Recourse Arrangements
+Risk-sharing provisions.
+
+Call Report Treatment
+Regulatory reporting guidance.
+
+Independent Credit Analysis
+Requirement for independent analysis.
+
+Participation Agreements
+Contractual terms governing participations.
+
+Participations Between Affiliated Institutions
+Transactions among related entities.
+
+Sales of 100 Percent Loan Participations
+Full loan sales.
+
+Environmental Risk Program
+Programs to manage environmental liability.
+
+Elements of an Effective Environmental Risk Program
+Key components of risk management.
+
+Examination Procedures
+Examiner evaluation steps.
+
+LOAN PROBLEMS
+
+Poor Selection of Risks
+Inadequate risk assessment.
+
+Overlending
+Excessive credit extension.
+
+Failure to Establish or Enforce Liquidation Agreements
+Weak recovery planning.
+
+Incomplete Credit Information
+Insufficient borrower data.
+
+Overemphasis on Loan Income
+Ignoring credit risk for yield.
+
+Self-Dealing
+Conflicts involving insiders.
+
+Technical Incompetence
+Lack of lending expertise.
+
+Lack of Supervision
+Inadequate oversight.
+
+Lack of Attention to Changing Economic Conditions
+Failure to adapt to economic changes.
+
+Competition
+Competitive pressures increasing risk.
+
+Potential Problem Indicators by Document
+Warning signs in loan files.
+
+SELECTING A LOAN REVIEW SAMPLE IN A RISK-FOCUSED EXAMINATION
+
+Assessing the Risk Profile
+Evaluation of portfolio risk.
+
+Selecting the Sample
+Choosing loans for review.
+
+Nonhomogeneous Loan Sample
+Review of diverse loans.
+
+Homogeneous Pool Sample
+Review of similar loan groups.
+
+Determining the Depth of the Review
+Scope based on risk.
+
+Adjusting Loan Review
+Modifying review scope as needed.
+
+Accepting an Institution’s Internal Ratings
+Use of internal risk grades.
+
+Loan Penetration Ratio
+Measure of review coverage.
+
+Large Bank Loan Review
+Special considerations for large institutions.
+
+LOAN EVALUATION AND CLASSIFICATION
+
+Loan Evaluation
+Assessment of individual loans.
+
+Review of Files and Records
+Document review procedures.
+
+Additional Transaction Testing
+Supplemental testing.
+
+Loan Discussion
+Communication with management.
+
+Loan Analysis
+Credit analysis procedures.
+
+Loan Classification
+Assignment of regulatory classifications.
+
+Definitions
+Classification definitions.
+
+Special Mention Assets
+Credits with potential weaknesses.
+
+Troubled Commercial Real Estate Loan Classification Guidelines
+Special CRE classification standards.
