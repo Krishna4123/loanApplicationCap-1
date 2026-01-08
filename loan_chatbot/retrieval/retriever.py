@@ -6,7 +6,7 @@ class Retriever:
     def __init__(self, vector_store: VectorStore):
         self.vector_store = vector_store
 
-    def retrieve(self, query: str, k: int = 3) -> List[str]:
+    def retrieve(self, query: str, k: int = 5) -> List[str]:
         """
         Retrieves the top-k most relevant text chunks for a given query.
         

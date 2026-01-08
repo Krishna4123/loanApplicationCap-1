@@ -28,7 +28,10 @@ def get_llm_response(final_prompt: str, system_context: str) -> str:
             messages=[
                 {"role": "system", "content": system_context},
                 {"role": "user", "content": final_prompt}
-            ]
+            ],
+            max_tokens=1000,
+            temperature=0.9,
+            top_p=0.9
         )
         return response.choices[0].message.content
     except Exception as e:

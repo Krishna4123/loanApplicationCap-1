@@ -111,7 +111,7 @@ def chat_logic(message, history, user_context_state):
     """
     
     # 1. Retrieval
-    retrieved_docs = retriever.retrieve(message, k=3)
+    retrieved_docs = retriever.retrieve(message, k=5)
     
     # 2. Prompt Assembly
     final_prompt = PromptBuilder.build(
