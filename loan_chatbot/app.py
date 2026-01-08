@@ -1,5 +1,6 @@
 import gradio as gr
 import os
+import time
 from ingestion.loader import load_text_files
 from ingestion.chunker import chunk_text
 from ingestion.embedder import get_embedding
@@ -66,6 +67,8 @@ def load_or_create_vector_store():
             if emb is not None:
                 all_chunks.append(chunk)
                 all_embeddings.append(emb)
+            # Add a small delay to stay under the 1000 TPM rate limit
+            time.sleep(2)
         print()  # New line after progress
     
     vector_store.add_documents(all_chunks, all_embeddings)

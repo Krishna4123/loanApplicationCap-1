@@ -12,26 +12,35 @@ client = OpenAI(
     base_url=os.getenv("BASE_URL")
 )
 
+import time
+
 def get_embedding(text: str) -> np.ndarray:
     """
     Generates a vector embedding for the given text using OpenAI client.
-    
-    Args:
-        text (str): The text to embed.
-        
-    Returns:
-        np.ndarray: The embedding vector.
+    Includes exponential backoff to handle Rate Limit (429) errors.
     """
     text = text.replace("\n", " ")
-    try:
-        response = client.embeddings.create(
-            input=[text],
-            model="text-embedding-3-small"
-        )
-        embedding = response.data[0].embedding
-        return np.array(embedding, dtype='float32')
-    except Exception as e:
-        print(f"Error generating embedding: {e}")
-        # Return a zero vector or handle error appropriately
-        # For simplicity, returning None implies failure
-        return None
+    max_retries = 5
+    base_delay = 2  # seconds
+
+    for attempt in range(max_retries):
+        try:
+            response = client.embeddings.create(
+                input=[text],
+                model="text-embedding-3-small"
+            )
+            embedding = response.data[0].embedding
+            return np.array(embedding, dtype='float32')
+        except Exception as e:
+            error_str = str(e)
+            if "429" in error_str:
+                delay = base_delay * (2 ** attempt)
+                print(f"\nRate limit hit (429). Waiting {delay} seconds before retry {attempt + 1}/{max_retries}...")
+                time.sleep(delay)
+                continue
+            else:
+                print(f"Error generating embedding: {e}")
+                return None
+    
+    print("Max retries reached. Failed to generate embedding.")
+    return None
